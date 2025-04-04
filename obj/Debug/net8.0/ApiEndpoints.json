@@ -1,0 +1,111 @@
+[
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "GetAverageCallCostAsync",
+    "RelativePath": "api/CDR/average-call-cost",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "GetCallRecordsByPhoneNumberAsync",
+    "RelativePath": "api/CDR/call-records-by-phone-number",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "GetLongestCallAsync",
+    "RelativePath": "api/CDR/longest-call",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "CDR_Analytics.DTO_s.CDRDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "GetMostFrequentCallerAsync",
+    "RelativePath": "api/CDR/most-frequent-caller",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "GetTotalCallCostByCallerAsync",
+    "RelativePath": "api/CDR/total-call-cost-by-caller",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "callerID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "GetTotalCallsInPeriodAsync",
+    "RelativePath": "api/CDR/total-calls-in-period",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateOnly",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CDR_Analytics.Controllers.CDRController",
+    "Method": "UploadCDRFileAsync",
+    "RelativePath": "api/CDR/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
