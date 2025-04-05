@@ -7,9 +7,11 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
+
+// Add DbContext with the retrieved connection string
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddCors(options =>
 {

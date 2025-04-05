@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CDR_Analytics")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c29eafd9f867cdbe62a59538f47620b95f86284")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be4d959af6c4a5d0fd8ccb2f35c77ba4da51450e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CDR_Analytics")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CDR_Analytics")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,7 +3,6 @@ using System;
 using CDR_Analytics.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -17,10 +16,8 @@ namespace CDR_Analytics.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.3")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+                .HasAnnotation("ProductVersion", "6.0.3")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("CDR_Analytics.Entities.CDR", b =>
                 {
@@ -28,16 +25,14 @@ namespace CDR_Analytics.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
                     b.Property<DateOnly>("CallDate")
                         .HasColumnType("date");
 
                     b.Property<string>("CallerID")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<decimal>("Cost")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<int>("Currency")
                         .HasColumnType("int");
@@ -46,13 +41,13 @@ namespace CDR_Analytics.Migrations
                         .HasColumnType("int");
 
                     b.Property<TimeOnly?>("EndTime")
-                        .HasColumnType("time");
+                        .HasColumnType("time(6)");
 
                     b.Property<string>("Recipient")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("Reference")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 
@@ -65,7 +60,7 @@ namespace CDR_Analytics.Migrations
                     b.HasIndex("Recipient")
                         .HasDatabaseName("Idx_Recipient");
 
-                    b.ToTable("CDRs");
+                    b.ToTable("CDRs", (string)null);
                 });
 #pragma warning restore 612, 618
         }
